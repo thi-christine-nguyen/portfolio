@@ -4,78 +4,28 @@ import {motion} from 'framer-motion';
 import {AppWrap} from '../../wrapper';
 
 import {images} from '../../constants';
-const scaleVariants = {
-    whileInView: {
-        scale: [0,1],
-        opacity: [0,1],
-        transition : {
-            duration: 1,
-            ease: 'easeInOut'
 
-        }
-
-    }
-}
 
 const Header = () => {
     return (
-        <div className="app__header app__flex">
-            <motion.div
-                whileInView={{ x: [-100,0], opacity: [0,1]}}
-                transition={{duration:0.5}}
-                className="app__header-info"
-            >
-
-                <div className="app__header-badge">
-                    <div className="badge-cmp app__flex">
-                        <span>👋</span>
-                        <div style={{marginLeft: 20}}>
-                            <p className="p-text">Hello, I am</p>
-                            <h1 className="head-text">Thi-Christine</h1>
-
-                        </div>
-                    </div>
-
-                    <div className="tag-cmp app__flex">
-                        <p className="p-text">Web Developer</p>
-                        <p className="p-text"> College Student</p>
-
-                    </div>
-
+        <div className="app__header">
+            <h2 className="head-text" >Welcome to my portfolio !</h2>
+            <div className="row app__header_container">
+                <div className="col-4">
+                    <img src={images.profil} className="rounded float-start" alt="profile-bg"/>
                 </div>
+                <div className="col-8 p-3 mb-2 app__header_text text-dark rounded border border-primary">
 
-            </motion.div>
-
-            <motion.div
-                whileInView={{opacity: [0,1]}}
-                transition={{duration:0.5, delayChildren: 0.5}}
-                className="app__header-img"
-            >
-                <img src={images.profile} alt="profile-bg"/>
-                <motion.img
-                    whileInView={{opacity: [0,1]}}
-                    transition={{duration:1, ease: 'easeInOut'}}
-                    className="overlay_circle"
-                    src={images.circle}
-                    alt="profile_circle"
-
-                />
-            </motion.div>
-
-            <motion.div
-                variants={scaleVariants}
-                whileInView ={scaleVariants.whileInView}
-                className="app__header-circles"
-            >
-                {[images.flutter, images.redux, images.sass].map((circle, index) =>(
-                    <div className="circle-cmp app__flex" key={`circle-${index}`}>
-                        <img src={circle} alt="circle"/>
-
-                    </div>
-                ))}
+                    <p>Nice to meet you ! I am Thi-Christine NGUYEN <br/>
+                        23 years old, I'm a IT College student from France (Montpellier)
+                    </p>
+                </div>
+            </div>
 
 
-            </motion.div>
+
+
+
 
         </div>
     );
