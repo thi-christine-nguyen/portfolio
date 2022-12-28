@@ -16,22 +16,6 @@
 
 }
 
-.app__navbar-logo{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  img{
-    width: 90px;
-    height: 20px;
-
-    @media screen and (min-width: 2000px){
-      width: 180px;
-      height: 40px;
-    }
-  }
-}
-
 .app__navbar-links{
   flex: 1;
   display: flex;
@@ -105,7 +89,7 @@
     svg{
       width: 35px;
       height: 35px;
-      color: var(--secondary-color);
+      color: black;
       margin: 0.5rem 1rem;
     }
 
@@ -124,7 +108,7 @@
         margin: 1rem;
 
         a{
-          color: var(--gray-color);
+          color: black;
           text-decoration: none;
           font-size: 1rem;
           text-transform: uppercase;
@@ -132,7 +116,7 @@
           transition: all 0.3s ease-in-out;
 
           &:hover{
-            color: var(--secondary-color);
+            color: var(--white-color);
           }
         }
 
